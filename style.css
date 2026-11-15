@@ -1,0 +1,367 @@
+/* ---- 1. BASIC RESET & FONTS ---- */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: #0f172a; 
+    color: #f8fafc;
+
+}
+
+
+/* ---- 2. HEADER & NAVIGATION ---- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #38bdf8; 
+}
+
+nav a {
+    font-size: 16px;
+    color: #f8fafc;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ---- 3. REUSABLE SECTION STYLE ---- */
+.section {
+    padding: 100px 10% 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #38bdf8;
+}
+
+/* ---- 4. HOME SECTION ---- */
+#home {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h1 span {
+    color: #38bdf8;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px 0 20px;
+    color: #94a3b8;
+}
+
+.home-content p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* ---- 5. ABOUT SECTION ---- */
+#about {
+    background: #1e293b;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+
+/* ---- 6.  SKILLS LAYOUT ---- */
+
+.skills-layout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    width: 100%;
+}
+
+.skills-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-column h3 {
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 8px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-grid.standard-gap {
+    margin-bottom: 35px; 
+}
+
+/* Graphic Skill Styling Variant */
+.skill-box.graphic-tech {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.05);
+}
+
+/* Subtitles for Projects */
+.sub-section-title {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Shared Project/Portfolio List */
+.portfolio-list-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.portfolio-item-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #1e293b;
+    padding: 14px 20px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* Web Project Hover Effect */
+.portfolio-item-box:hover {
+    border-color: #38bdf8;
+    background: #0f172a;
+    transform: translateX(5px);
+}
+
+/* Graphic Design Item Variant Hover Effect */
+.portfolio-item-box:hover {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.05);
+    transform: translateX(5px);
+}
+.project-item-box-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-item-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #1e293b;
+    padding: 14px 20px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+
+/* ---- MOBILE RESPONSIVENESS ---- */
+@media (max-width: 768px) {
+    .skills-layout-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+/* ---- 7. CONTACT SECTION ---- */
+#contact {
+    background: #1e293b;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+
+/* ---- 8. MOBILE RESPONSIVE ---- */
+@media (max-width: 768px) {
+    header { padding: 20px 5%; }
+    nav a { margin-left: 20px; font-size: 14px; }
+    .home-content h1 { font-size: 40px; }
+    .home-content h3 { font-size: 24px; }
+    .section { padding: 80px 5% 40px; }
+}
+.typing {
+    color: #38bdf8;
+    border-right: 2px solid #38bdf8;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+#contact {
+    background: #1e293b;
+    text-align: center;
+    padding: 100px 10%;
+    width: 100%;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+/* यह कोड पूरे ब्लॉक को स्क्रीन के बीच में लाएगा */
+.contact-container {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;          /* इससे पूरा डिब्बा बीच में आ जाता है */
+    width: 100%;
+}
+
+/* फॉर्म को बड़ा और साफ़ करने के लिए */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px; /* फॉर्म की चौड़ाई सेट की */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #38bdf8;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start; 
+    max-width: 400px;
+}
+
+.info-item p {
+    font-size: 20px; 
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    text-align: left;
+}
+
+.wa-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #25d366;
+    color: #fff !important;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.wa-btn:hover {
+    background: #128c7e;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    .contact-info {
+        align-items: center;
+    }
+    .info-item p {
+        text-align: center;
+    }
+}
+
